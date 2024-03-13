@@ -1,0 +1,13 @@
+.calculatorButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calculatorButtons .numberButtons {
+    flex-basis: 65%;
+}
+
+.calculatorButtons .functionButtons {
+    flex-basis: 30%;
+}

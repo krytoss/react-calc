@@ -1,0 +1,8 @@
+#inputLine {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+}

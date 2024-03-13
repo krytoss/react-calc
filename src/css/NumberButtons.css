@@ -1,0 +1,9 @@
+.numberButtons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.numberButtons button {
+    flex-basis: 33.333333%;
+    flex-grow: 1;
+}

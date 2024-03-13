@@ -1,6 +1,8 @@
+import '../css/TextField.css'
+
 function TextField() {
     return (
-        <input type='text' />
+        <input id='inputLine' type='text' />
     )
 }
 

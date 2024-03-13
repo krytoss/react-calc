@@ -1,0 +1,9 @@
+.functionButtons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.functionButtons button {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
