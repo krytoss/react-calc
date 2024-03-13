@@ -1,7 +1,7 @@
 import Button from "./Button"
 import '../css/FunctionButtons.css'
 
-function FunctionButtons() {
+function FunctionButtons({ addToInput }) {
 
     const symbols = [ '+', '-', '*', '/', 'x^2', '√', '=' ]
 
@@ -9,7 +9,7 @@ function FunctionButtons() {
         <div className="functionButtons">
             {
                 symbols.map((f, i) => {
-                    return <Button key={i} value={f} />
+                    return <Button key={i} value={f} addToInput={ addToInput } />
                 })
             }
         </div>

@@ -1,6 +1,11 @@
-function Button({ value, className }) {
+function Button({ value, addToInput }) {
+
+    const handleButtonClick = ( event ) => {
+        addToInput(value)
+    }
+
     return(
-        <button className='calculatorButton'>{ value }</button>
+        <button className='calculatorButton' onClick = { handleButtonClick }>{ value }</button>
     )
 }
 
