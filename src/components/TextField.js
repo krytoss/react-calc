@@ -1,6 +1,6 @@
 import '../css/TextField.css'
 
-function TextField({ value, setInput }) {
+function TextField({ value, setInput, evalInput }) {
 
     const handleChange = ( event ) => {
         if ( event.target.value === '' || event.target.value.match(/^[0-9+\-*/]+$/) ) {
@@ -10,8 +10,14 @@ function TextField({ value, setInput }) {
         }
     }
 
+    const handleKeyDown = ( event ) => {
+        if (event.keyCode === 13) {
+            evalInput()
+        }
+    }
+
     return (
-        <input id='inputLine' type='text' value={value} onChange={ handleChange } />
+        <input id='inputLine' type='text' value={value} onChange={ handleChange } onKeyDown={ handleKeyDown } />
     )
 }
 

@@ -18,7 +18,7 @@ function Calculator() {
 
     return (
         <div id='calculator'>
-            <TextField value={ input } setInput={ setInput } />
+            <TextField value={ input } setInput={ setInput } evalInput={ evalInput } />
             <div className='calculatorButtons'>
                 <NumberButtons onClick={ addToInput }/>
                 <FunctionButtons addToInput={ addToInput } setInput={ setInput } evalInput={ evalInput }/>
