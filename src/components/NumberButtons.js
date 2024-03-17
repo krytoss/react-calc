@@ -1,17 +1,17 @@
 import Button from "./Button";
 import '../css/NumberButtons.css'
 
-function NumberButtons({ addToInput }) {
+function NumberButtons({ onClick }) {
 
-    let buttons = [];
-    for (let i = 0; i < 9; i++) {
-        buttons.push(<Button key={i+1} value={i+1} className='number' addToInput={ addToInput } />)
-    }
+    const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '.'];
 
     return (
         <div className='numberButtons'>
-            {buttons}
-            <Button key='0' value='0' addToInput={ addToInput } />
+            {
+                buttons.map((val, i) => {
+                    return <Button key={ i } value={ val } onClick={ onClick } />
+                })
+            }
         </div>
     )
 

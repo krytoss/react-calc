@@ -8,16 +8,20 @@ function Calculator() {
 
     const [ input, setInput ] = useState('');
 
-    const addToInput = (clicked) => {
-        setInput(input + clicked)
+    const addToInput = (event) => {
+        setInput(input + event.target.innerHTML)
+    }
+
+    const evalInput = () => {
+        setInput(eval(input))
     }
 
     return (
         <div id='calculator'>
             <TextField value={ input } setInput={ setInput } />
             <div className='calculatorButtons'>
-                <NumberButtons addToInput={ addToInput }/>
-                <FunctionButtons addToInput={ addToInput }/>
+                <NumberButtons onClick={ addToInput }/>
+                <FunctionButtons addToInput={ addToInput } setInput={ setInput } evalInput={ evalInput }/>
             </div>
         </div>
     )
