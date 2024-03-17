@@ -9,11 +9,15 @@ function Calculator() {
     const [ input, setInput ] = useState('');
 
     const addToInput = (event) => {
-        setInput(input + event.target.innerHTML)
+        setInput(input => (input === '0' ? '' : input) + event.target.innerHTML)
     }
 
     const evalInput = () => {
-        setInput(eval(input))
+        if (input.match(/^\d+(.\d+)*([\-+*\/]\d+(.\d+)*)*$/)) {
+            setInput(eval(input).toString())
+        } else {
+            setInput('0')
+        }
     }
 
     return (
