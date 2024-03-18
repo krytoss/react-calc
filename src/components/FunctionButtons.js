@@ -6,11 +6,13 @@ function FunctionButtons({ addToInput, setInput, evalInput }) {
     const symbols = [ '+', '-', '*', '/', 'x^2', '√', '=' ]
 
     const square = () => {
-        setInput(input => eval(input) ** 2)
+        evalInput()
+        setInput(input => (input ** 2).toString())
     }
 
     const squareRoot = () => {
-        setInput(input => eval(input) ** (1/2))
+        evalInput()
+        setInput(input => (input ** (1/2)).toString())
     }
 
     return (

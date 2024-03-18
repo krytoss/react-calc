@@ -13,7 +13,7 @@ function Calculator() {
     }
 
     const evalInput = () => {
-        if (input.match(/^\d+(.\d+)*([\-+*\/]\d+(.\d+)*)*$/)) {
+        if (input.match(/^\d+(.\d+)*([-+*/]\d+(.\d+)*)*$/)) {
             setInput(eval(input).toString())
         } else {
             setInput('0')
