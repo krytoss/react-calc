@@ -2,6 +2,7 @@ import { useState } from "react"
 import NumberButtons from "./NumberButtons"
 import FunctionButtons from "./FunctionButtons"
 import TextField from "./TextField"
+import { evaluate } from "mathjs"
 import '../css/Calculator.css'
 
 function Calculator() {
@@ -14,7 +15,7 @@ function Calculator() {
 
     const evalInput = () => {
         if (input.match(/^\d+(.\d+)*([-+*/]\d+(.\d+)*)*$/)) {
-            setInput(eval(input).toString())
+            setInput(evaluate(input).toString())
         } else {
             setInput('0')
         }
